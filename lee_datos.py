@@ -1,13 +1,4 @@
-# -*- coding: utf-8 -*-
-
-"""
-Ernesto Barrera
-v1.0
-Enero 2023
-"""
-
 import pandas as pd
-
 
 def ayuntamiento(ifile, codigo_magnitud=8, codigo_estacion=28079001) :
 
