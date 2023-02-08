@@ -130,10 +130,22 @@ def ayuntamiento(ifile, codigo_magnitud=8, codigo_estacion=28079001) :
     # -----------------------------------------------
     df['fecha'] = pd.to_datetime({'year':df.ANO,'month':df.MES,'day':df.DIA})
     
-    # Eliminamos colunas innecesarias
+    # Eliminamos columnas innecesarias
     # -------------------------------------
     df = df.drop(columns=['ANO','MES','DIA'])
+    
+    # Reordenamos las columnas (no es necesario)
+    # -------------------------------------------
+    df = df[['fecha','valor']]
 
+    # Establecemos el tiempo como índice
+    # ------------------------------------
+    df.set_index(['fecha'],inplace=True)
+
+    # Ordenamos los datos por tiempo creciente
+    # ------------------------------------------
+    df.sort_index(inplace=True)
+        
     return df, *maglist[codigo_magnitud], estalist[codigo_estacion][1]
 
 
@@ -252,10 +264,22 @@ def comunidad(ifile, codigo_magnitud=8, codigo_estacion=28067001) :
     # -----------------------------------------------
     df['fecha'] = pd.to_datetime({'year':df.ano,'month':df.mes,'day':df.dia,'hour':df.hora})
     
-    # Eliminamos colunas innecesarias
+    # Eliminamos columnas innecesarias
     # -------------------------------------
     df = df.drop(columns=['ano','mes','dia','hora'])
+    
+    # Reordenamos las columnas (no es necesario)
+    # -------------------------------------------
+    df = df[['fecha','valor']]
 
+    # Establecemos el tiempo como índice
+    # ------------------------------------
+    df.set_index(['fecha'],inplace=True)
+
+    # Ordenamos los datos por tiempo creciente
+    # ------------------------------------------
+    df.sort_index(inplace=True)
+    
     return df, *maglist[codigo_magnitud], estalist[codigo_estacion][1]
 
 
@@ -365,10 +389,22 @@ def meteo(ifile, codigo_magnitud=83, codigo_estacion=28067001) :
     # -----------------------------------------------
     df['fecha'] = pd.to_datetime({'year':df.ano,'month':df.mes,'day':df.dia,'hour':df.hora})
     
-    # Eliminamos colunas innecesarias
+    # Eliminamos columnas innecesarias
     # -------------------------------------
     df = df.drop(columns=['ano','mes','dia','hora'])
+    
+    # Reordenamos las columnas (no es necesario)
+    # -------------------------------------------
+    df = df[['fecha','valor']]
 
+    # Establecemos el tiempo como índice
+    # ------------------------------------
+    df.set_index(['fecha'],inplace=True)
+
+    # Ordenamos los datos por tiempo creciente
+    # ------------------------------------------
+    df.sort_index(inplace=True)
+    
     return df, *maglist[codigo_magnitud], estalist[codigo_estacion][1]
 
 
