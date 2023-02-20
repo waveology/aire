@@ -95,7 +95,7 @@ maglist_meteo = {
 }
 
 
-def comunidad(ifile, codigo_magnitud=8, codigo_estacion=28067001) :
+def contaminacion(ifile, codigo_magnitud=8, codigo_estacion=28067001) :
     
     # Lectura de datos
     # -------------------------------------------
