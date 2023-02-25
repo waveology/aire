@@ -1,5 +1,4 @@
 Introducción al análisis de datos de calidad del aire con Python
-###Ernesto Barrera 2023
 =====================================================================
 
 1.- Este repositorio contiene notebooks Jupyter que ilustran algunas aplicaciones
