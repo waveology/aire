@@ -36,7 +36,7 @@ Esta guía resume los pasos para el uso en Windows:
           conda install scipy
           conda install scikit-lyearn
 
-3.- Iniciar el entorno de desarrollo spyder y abrir el proyecto 'aire' que se encuentra en este directorio.
+3.- Iniciar el entorno de desarrollo spyder y acceder a los scripts de este directorio
 
 
 
